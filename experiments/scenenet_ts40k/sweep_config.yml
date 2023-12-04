@@ -1,0 +1,120 @@
+# Description: config file for scenenet_ts40k experiment
+# Author: Diogo Mateus
+program: main.py
+method: random
+metric:
+  goal: maximize
+  name: val_FBetaScore 
+project: 'scenenet_ts40k'
+command:
+  #- ${env}
+  - python3
+  - ${program}
+  - "--wandb_sweep"
+  #- ${args}
+parameters:
+  output_dir: 
+    value: 'experiments/scenenet_ts40k/outputs'
+  # ------------------ #
+  # dataset config
+  # ------------------ #
+  dataset:
+    value: 'ts40k'
+  data_path:
+    value: ''
+  batch_size:
+    values: [32, 64]
+  voxel_grid_size:
+    value: (64, 64, 64)
+  voxel_size:
+    value: None
+  #dataset_params:
+  num_workers:
+    value: 8
+  val_split:
+    value: 0.1
+  test_split:
+    value: 0.3
+  # ------------------ #
+  # model config
+  # ------------------ #
+  model:
+    value: 'scenenet'
+  cylinder_geneo:
+    values: [1, 2, 4]
+  arrow_geneo:
+    values: [1, 2, 4]
+  neg_sphere_geneo:
+    values: [1, 2, 4]  
+  kernel_size:
+    values: ['(9, 5, 5)', '(9, 7, 7)', '(6, 5, 5)']
+  # ------------------ #
+  # training config
+  # ------------------ #
+  optimizer:
+    value: 'adam'
+  learning_rate:
+    min: 0.001
+    max: 0.1
+  max_epochs:
+    value: -1
+  gpus:
+    value: -1 # -1 for all available gpus
+  early_stop_metric:
+    value: 'train_FBetaScore'
+  # ------------------ #
+  #criterion config
+  # ------------------ #
+  criterion:
+    values: ['geneo', 'geneo_tversky'] # 'mse', 'focal_tversky', 'dice', 'tversky', 'geneo', 'geneo_tversky', 'geneo_dice', 'geneo_dice_bce'
+  weighting_scheme_path:
+    value: 'core/criterions/hist_estimation.pickle'
+  #criterion_params: # possible criterion params and their values
+  weight_alpha:
+    values: [0.1, 1, 5]
+  weight_epsilon:
+    values: [0.1, 0.01]
+  mse_weight:
+    values: [1, 5]
+  convex_weight:
+    values: [1, 5]
+  tversky_alpha:
+    values: [1, 2]
+  tversky_beta:
+    values: [0.5, 1]
+  tversky_smooth:
+    value: 1.0e-6
+  focal_gamma:
+    values: [1, 2, 5]
+  # ------------------ #
+  # Lit Trainer config
+  # ------------------ #
+  fast_dev_run:
+    value: True
+  precision: # 16 or 32 FPU precision
+    value: 16
+  auto_lr_find:
+    value: True
+  auto_scale_batch_size:
+    value: False
+  profiler:
+    value: False
+  accumulate_grad_batches:
+    value: 1
+  save_onnx:
+    value: True
+  # ------------------ #
+  # Checkpointing config
+  # ------------------ #
+  resume_from_checkpoint:
+    value: False
+  checkpoint_dir:
+    value: /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints
+  resume_checkpoint_name:
+    value: FBetaScore # 'FbetaScore', 'train_loss', last, 'best', 'F1Score'
+  checkpoint_every_n_epochs: # This parameter and the next one are mutually exclusive
+    value: 1 # every n epochs
+  checkpoint_every_n_steps:
+    value: 0 # every n steps
+   
+   

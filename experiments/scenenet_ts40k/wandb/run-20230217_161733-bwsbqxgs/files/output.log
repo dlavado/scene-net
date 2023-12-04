@@ -1,0 +1,1054 @@
+wandb init.
+{'group': 'scenenet_ts40k_test', 'output_dir': 'experiments/scenenet_ts40k/outputs', 'dataset': 'ts40k', 'data_path': '', 'batch_size': 4, 'voxel_grid_size': '(64, 64, 64)', 'voxel_size': 'None', 'num_workers': 4, 'val_split': 0.1, 'test_split': 0.3, 'model': 'scenenet', 'cylinder_geneo': 1, 'arrow_geneo': 1, 'neg_sphere_geneo': 1, 'kernel_size': '(9, 5, 5)', 'optimizer': 'sgd', 'learning_rate': 0.001, 'max_epochs': 20, 'gpus': -1, 'criterion': 'geneo_tversky', 'weighting_scheme_path': 'core/criterions/hist_estimation.pickle', 'weight_alpha': 1, 'weight_epsilon': 0.1, 'mse_weight': 1, 'convex_weight': 5, 'tversky_alpha': 2, 'tversky_beta': 2, 'tversky_smooth': 1e-06, 'focal_gamma': 4, 'fast_dev_run': True, 'precision': 16, 'auto_lr_find': True, 'auto_scale_batch_size': True, 'profiler': False, 'resume_from_checkpoint': False, 'checkpoint_dir': 'experiments/scenenet_ts40k/checkpoints', 'resume_checkpoint_name': 'FbetaScore', 'checkpoint_every_n_epochs': 1, 'checkpoint_every_n_steps': 0}
+[34m[1mwandb[39m[22m: logging graph, to disable use `wandb.watch(log_graph=False)`
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Sanity Checking: 0it [00:00, ?it/s]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+  | Name          | Type               | Params
+-----------------------------------------------------
+0 | model         | SceneNet           | 13
+1 | criterion     | GENEO_Tversky_Loss | 0
+2 | train_metrics | MetricCollection   | 0
+3 | val_metrics   | MetricCollection   | 0
+4 | test_metrics  | MetricCollection   | 0
+-----------------------------------------------------
+11        Trainable params
+2         Non-trainable params
+13        Total params
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  90%|█████████████████████████████████████████████████████████████████████████████████████████████████████▏           | 60/67 [01:36<00:11,  1.60s/it, loss=1.01, v_num=qxgs, train_loss_step=0.991]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.31it/s]
+Epoch 0, global step 60: 'train_JaccardIndex' reached 0.49195 (best 0.49195), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 0, global step 60: 'train_Precision' reached 0.01818 (best 0.01818), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 0, global step 60: 'train_Recall' reached 0.69206 (best 0.69206), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Recall.ckpt' as top 1
+Epoch 0, global step 60: 'train_F1Score' reached 0.03543 (best 0.03543), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 0, global step 60: 'train_FBetaScore' reached 0.02258 (best 0.02258), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.4919494092464447
+	train_Precision: 0.01817876100540161
+	train_Recall: 0.6920587420463562
+	train_F1Score: 0.03542693704366684
+	train_FBetaScore: 0.022575201466679573
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:  90%|█████████████████████████████████████████▏    | 60/67 [01:34<00:11,  1.58s/it, loss=1.01, v_num=qxgs, train_loss_step=0.991, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:04<00:01,  1.19it/s]
+Epoch 1, global step 120: 'train_JaccardIndex' reached 0.49211 (best 0.49211), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 1, global step 120: 'train_Precision' reached 0.01827 (best 0.01827), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 1, global step 120: 'train_Recall' was not in top 1
+Epoch 1, global step 120: 'train_F1Score' reached 0.03560 (best 0.03560), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 1, global step 120: 'train_FBetaScore' reached 0.02269 (best 0.02269), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49211427569389343
+	train_Precision: 0.018271131440997124
+	train_Recall: 0.6906895637512207
+	train_F1Score: 0.03560050576925278
+	train_FBetaScore: 0.022688863798975945
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 2:  90%|█████████████████████████████████████████▏    | 60/67 [01:29<00:10,  1.49s/it, loss=1.01, v_num=qxgs, train_loss_step=0.990, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.39it/s]
+Epoch 2, global step 180: 'train_JaccardIndex' reached 0.49230 (best 0.49230), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 2, global step 180: 'train_Precision' reached 0.01838 (best 0.01838), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 2, global step 180: 'train_Recall' was not in top 1
+Epoch 2, global step 180: 'train_F1Score' reached 0.03581 (best 0.03581), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 2, global step 180: 'train_FBetaScore' reached 0.02282 (best 0.02282), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49230021238327026
+	train_Precision: 0.018381018191576004
+	train_Recall: 0.6894270777702332
+	train_F1Score: 0.03580736368894577
+	train_FBetaScore: 0.022824140265583992
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 3:  90%|█████████████████████████████████████████▏    | 60/67 [01:43<00:12,  1.73s/it, loss=1.01, v_num=qxgs, train_loss_step=0.990, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+	train_JaccardIndex: 0.4924928545951843
+	train_Precision: 0.018493875861167908
+	train_Recall: 0.6879867911338806
+	train_F1Score: 0.03601950779557228
+	train_FBetaScore: 0.02296302653849125
+Epoch 4:   0%|                                                       | 0/67 [00:00<?, ?it/s, loss=1.01, v_num=qxgs, train_loss_step=0.990, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+Epoch 3, global step 240: 'train_JaccardIndex' reached 0.49249 (best 0.49249), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 3, global step 240: 'train_Precision' reached 0.01849 (best 0.01849), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 3, global step 240: 'train_Recall' was not in top 1
+Epoch 3, global step 240: 'train_F1Score' reached 0.03602 (best 0.03602), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 3, global step 240: 'train_FBetaScore' reached 0.02296 (best 0.02296), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 4:  90%|█████████████████████████████████████████▏    | 60/67 [01:27<00:10,  1.47s/it, loss=1.01, v_num=qxgs, train_loss_step=0.989, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+	train_JaccardIndex: 0.4927072525024414
+	train_Precision: 0.018624240532517433
+	train_Recall: 0.6865820288658142
+	train_F1Score: 0.03626476228237152
+	train_FBetaScore: 0.0231234859675169
+Epoch 5:   0%|                                                       | 0/67 [00:00<?, ?it/s, loss=1.01, v_num=qxgs, train_loss_step=0.989, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+Epoch 4, global step 300: 'train_JaccardIndex' reached 0.49271 (best 0.49271), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 4, global step 300: 'train_Precision' reached 0.01862 (best 0.01862), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 4, global step 300: 'train_Recall' was not in top 1
+Epoch 4, global step 300: 'train_F1Score' reached 0.03626 (best 0.03626), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 4, global step 300: 'train_FBetaScore' reached 0.02312 (best 0.02312), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 5:  90%|█████████████████████████████████████████▏    | 60/67 [01:30<00:10,  1.51s/it, loss=1.01, v_num=qxgs, train_loss_step=0.988, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.30it/s]
+Epoch 5, global step 360: 'train_JaccardIndex' reached 0.49291 (best 0.49291), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 5, global step 360: 'train_Precision' reached 0.01875 (best 0.01875), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 5, global step 360: 'train_Recall' was not in top 1
+Epoch 5, global step 360: 'train_F1Score' reached 0.03649 (best 0.03649), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 5, global step 360: 'train_FBetaScore' reached 0.02327 (best 0.02327), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49290943145751953
+	train_Precision: 0.018746068701148033
+	train_Recall: 0.6851061582565308
+	train_F1Score: 0.036493588238954544
+	train_FBetaScore: 0.02327338233590126
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 6:  90%|█████████████████████████████████████████▏    | 60/67 [01:30<00:10,  1.51s/it, loss=1.01, v_num=qxgs, train_loss_step=0.988, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+
+Validation DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:09<00:00,  1.39s/it]
+Epoch 6, global step 420: 'train_JaccardIndex' reached 0.49310 (best 0.49310), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 6, global step 420: 'train_Precision' reached 0.01886 (best 0.01886), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 6, global step 420: 'train_Recall' was not in top 1
+Epoch 6, global step 420: 'train_F1Score' reached 0.03671 (best 0.03671), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 6, global step 420: 'train_FBetaScore' reached 0.02341 (best 0.02341), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49310302734375
+	train_Precision: 0.018860572949051857
+	train_Recall: 0.6834880113601685
+	train_F1Score: 0.036708198487758636
+	train_FBetaScore: 0.023414188995957375
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 7:  90%|█████████████████████████████████████████▏    | 60/67 [01:30<00:10,  1.50s/it, loss=1.01, v_num=qxgs, train_loss_step=0.987, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.31it/s]
+Epoch 7, global step 480: 'train_JaccardIndex' reached 0.49329 (best 0.49329), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 7, global step 480: 'train_Precision' reached 0.01897 (best 0.01897), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 7, global step 480: 'train_Recall' was not in top 1
+Epoch 7, global step 480: 'train_F1Score' reached 0.03691 (best 0.03691), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 7, global step 480: 'train_FBetaScore' reached 0.02355 (best 0.02355), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.4932929575443268
+	train_Precision: 0.01896887831389904
+	train_Recall: 0.681585431098938
+	train_F1Score: 0.0369105190038681
+	train_FBetaScore: 0.02354726754128933
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 8:  90%|█████████████████████████████████████████▏    | 60/67 [01:31<00:10,  1.53s/it, loss=1.01, v_num=qxgs, train_loss_step=0.987, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.31it/s]
+Epoch 8, global step 540: 'train_JaccardIndex' reached 0.49349 (best 0.49349), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 8, global step 540: 'train_Precision' reached 0.01909 (best 0.01909), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 8, global step 540: 'train_Recall' was not in top 1
+Epoch 8, global step 540: 'train_F1Score' reached 0.03715 (best 0.03715), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 8, global step 540: 'train_FBetaScore' reached 0.02370 (best 0.02370), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.4934931993484497
+	train_Precision: 0.01909446530044079
+	train_Recall: 0.6801806688308716
+	train_F1Score: 0.03714613988995552
+	train_FBetaScore: 0.02370174042880535
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 9:  90%|█████████████████████████████████████████▏    | 60/67 [01:30<00:10,  1.51s/it, loss=1.01, v_num=qxgs, train_loss_step=0.986, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+	train_JaccardIndex: 0.49369123578071594
+	train_Precision: 0.0192159041762352
+	train_Recall: 0.6785447597503662
+	train_F1Score: 0.03737341985106468
+	train_FBetaScore: 0.023851020261645317
+Epoch 10:   0%|                                                      | 0/67 [00:00<?, ?it/s, loss=1.01, v_num=qxgs, train_loss_step=0.986, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+Epoch 9, global step 600: 'train_JaccardIndex' reached 0.49369 (best 0.49369), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 9, global step 600: 'train_Precision' reached 0.01922 (best 0.01922), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 9, global step 600: 'train_Recall' was not in top 1
+Epoch 9, global step 600: 'train_F1Score' reached 0.03737 (best 0.03737), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 9, global step 600: 'train_FBetaScore' reached 0.02385 (best 0.02385), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 10:  90%|██████████████████████████████████████████▉     | 60/67 [01:30<00:10,  1.50s/it, loss=1, v_num=qxgs, train_loss_step=0.986, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.010]
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.41it/s]
+Epoch 10, global step 660: 'train_JaccardIndex' reached 0.49390 (best 0.49390), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 10, global step 660: 'train_Precision' reached 0.01935 (best 0.01935), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 10, global step 660: 'train_Recall' was not in top 1
+Epoch 10, global step 660: 'train_F1Score' reached 0.03762 (best 0.03762), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 10, global step 660: 'train_FBetaScore' reached 0.02401 (best 0.02401), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49389949440956116
+	train_Precision: 0.01934528723359108
+	train_Recall: 0.6768377423286438
+	train_F1Score: 0.03761545568704605
+	train_FBetaScore: 0.02401004545390606
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 11:  90%|██████████████████████████████████████████▉     | 60/67 [01:30<00:10,  1.50s/it, loss=1, v_num=qxgs, train_loss_step=0.985, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.36it/s]
+Epoch 11, global step 720: 'train_JaccardIndex' reached 0.49413 (best 0.49413), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 11, global step 720: 'train_Precision' reached 0.01950 (best 0.01950), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 11, global step 720: 'train_Recall' was not in top 1
+Epoch 11, global step 720: 'train_F1Score' reached 0.03790 (best 0.03790), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 11, global step 720: 'train_FBetaScore' reached 0.02420 (best 0.02420), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.4941309094429016
+	train_Precision: 0.019497407600283623
+	train_Recall: 0.6753262877464294
+	train_F1Score: 0.03790058568120003
+	train_FBetaScore: 0.024197109043598175
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 12:  90%|██████████████████████████████████████████▉     | 60/67 [01:30<00:10,  1.51s/it, loss=1, v_num=qxgs, train_loss_step=0.984, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+	train_JaccardIndex: 0.4943481981754303
+	train_Precision: 0.019630758091807365
+	train_Recall: 0.6732458472251892
+	train_F1Score: 0.0381491482257843
+	train_FBetaScore: 0.024360869079828262
+Epoch 13:   0%|                                                         | 0/67 [00:00<?, ?it/s, loss=1, v_num=qxgs, train_loss_step=0.984, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 12, global step 780: 'train_JaccardIndex' reached 0.49435 (best 0.49435), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 12, global step 780: 'train_Precision' reached 0.01963 (best 0.01963), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 12, global step 780: 'train_Recall' was not in top 1
+Epoch 12, global step 780: 'train_F1Score' reached 0.03815 (best 0.03815), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 12, global step 780: 'train_FBetaScore' reached 0.02436 (best 0.02436), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 13:  90%|██████████████████████████████████████████▉     | 60/67 [01:30<00:10,  1.51s/it, loss=1, v_num=qxgs, train_loss_step=0.984, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+
+	train_JaccardIndex: 0.4945679008960724
+	train_Precision: 0.019772864878177643
+	train_Recall: 0.671467661857605
+	train_F1Score: 0.03841452673077583
+	train_FBetaScore: 0.02453545667231083
+Epoch 14:   0%|                                                         | 0/67 [00:00<?, ?it/s, loss=1, v_num=qxgs, train_loss_step=0.984, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 13, global step 840: 'train_JaccardIndex' reached 0.49457 (best 0.49457), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 13, global step 840: 'train_Precision' reached 0.01977 (best 0.01977), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 13, global step 840: 'train_Recall' was not in top 1
+Epoch 13, global step 840: 'train_F1Score' reached 0.03841 (best 0.03841), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 13, global step 840: 'train_FBetaScore' reached 0.02454 (best 0.02454), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 14:  90%|██████████████████████████████████████████▉     | 60/67 [01:30<00:10,  1.51s/it, loss=1, v_num=qxgs, train_loss_step=0.983, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.34it/s]
+Epoch 14, global step 900: 'train_JaccardIndex' reached 0.49479 (best 0.49479), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 14, global step 900: 'train_Precision' reached 0.01992 (best 0.01992), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 14, global step 900: 'train_Recall' was not in top 1
+Epoch 14, global step 900: 'train_F1Score' reached 0.03869 (best 0.03869), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 14, global step 900: 'train_FBetaScore' reached 0.02472 (best 0.02472), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.4947901964187622
+	train_Precision: 0.01991909183561802
+	train_Recall: 0.6697072982788086
+	train_F1Score: 0.03868750110268593
+	train_FBetaScore: 0.024715088307857513
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 15:  90%|██████████████████████████████████████████▉     | 60/67 [01:31<00:10,  1.53s/it, loss=1, v_num=qxgs, train_loss_step=0.983, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+
+Validation DataLoader 0:  71%|███████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 5/7 [00:03<00:01,  1.36it/s]
+Epoch 15, global step 960: 'train_JaccardIndex' reached 0.49501 (best 0.49501), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 15, global step 960: 'train_Precision' reached 0.02006 (best 0.02006), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 15, global step 960: 'train_Recall' was not in top 1
+Epoch 15, global step 960: 'train_F1Score' reached 0.03895 (best 0.03895), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 15, global step 960: 'train_FBetaScore' reached 0.02489 (best 0.02489), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_JaccardIndex: 0.49501216411590576
+	train_Precision: 0.020062575116753578
+	train_Recall: 0.6676980257034302
+	train_F1Score: 0.03895466402173042
+	train_FBetaScore: 0.024891238659620285
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 16:  90%|██████████████████████████████████████████▉     | 60/67 [01:31<00:10,  1.53s/it, loss=1, v_num=qxgs, train_loss_step=0.982, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+
+
+
+	train_JaccardIndex: 0.4952352046966553
+	train_Precision: 0.020211294293403625
+	train_Recall: 0.6658309102058411
+	train_F1Score: 0.03923171013593674
+	train_FBetaScore: 0.025073839351534843
+Epoch 17:   0%|                                                         | 0/67 [00:00<?, ?it/s, loss=1, v_num=qxgs, train_loss_step=0.982, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 16, global step 1020: 'train_JaccardIndex' reached 0.49524 (best 0.49524), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 16, global step 1020: 'train_Precision' reached 0.02021 (best 0.02021), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 16, global step 1020: 'train_Recall' was not in top 1
+Epoch 16, global step 1020: 'train_F1Score' reached 0.03923 (best 0.03923), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 16, global step 1020: 'train_FBetaScore' reached 0.02507 (best 0.02507), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+Epoch 17:   1%|▋                                                | 1/67 [00:04<05:28,  4.97s/it, loss=1, v_num=qxgs, train_loss_step=0.989, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:   4%|██▏                                              | 3/67 [00:08<02:52,  2.69s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:   6%|██▉                                              | 4/67 [00:09<02:23,  2.27s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:   9%|████▍                                            | 6/67 [00:11<01:57,  1.92s/it, loss=1, v_num=qxgs, train_loss_step=0.984, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  12%|█████▊                                           | 8/67 [00:13<01:41,  1.72s/it, loss=1, v_num=qxgs, train_loss_step=1.000, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  13%|██████▌                                          | 9/67 [00:18<01:56,  2.01s/it, loss=1, v_num=qxgs, train_loss_step=1.020, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  18%|████████▌                                       | 12/67 [00:20<01:31,  1.67s/it, loss=1, v_num=qxgs, train_loss_step=1.000, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  22%|██████████▋                                     | 15/67 [00:23<01:23,  1.60s/it, loss=1, v_num=qxgs, train_loss_step=1.020, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  24%|███████████▍                                    | 16/67 [00:24<01:19,  1.56s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  27%|████████████▉                                   | 18/67 [00:27<01:15,  1.54s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  28%|█████████████▌                                  | 19/67 [00:30<01:15,  1.58s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  33%|███████████████▊                                | 22/67 [00:31<01:05,  1.45s/it, loss=1, v_num=qxgs, train_loss_step=1.000, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  33%|███████████████▊                                | 22/67 [00:32<01:06,  1.47s/it, loss=1, v_num=qxgs, train_loss_step=0.995, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  36%|█████████████████▏                              | 24/67 [00:37<01:07,  1.58s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  39%|██████████████████▋                             | 26/67 [00:40<01:03,  1.55s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  39%|██████████████████▋                             | 26/67 [00:40<01:03,  1.56s/it, loss=1, v_num=qxgs, train_loss_step=1.020, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  43%|████████████████████▊                           | 29/67 [00:46<01:00,  1.59s/it, loss=1, v_num=qxgs, train_loss_step=0.988, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  45%|█████████████████████▍                          | 30/67 [00:46<00:57,  1.56s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  46%|██████████████████████▏                         | 31/67 [00:49<00:58,  1.61s/it, loss=1, v_num=qxgs, train_loss_step=1.010, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17:  49%|███████████████████████▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 17, global step 1080: 'train_JaccardIndex' reached 0.49546 (best 0.49546), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 17, global step 1080: 'train_Precision' reached 0.02036 (best 0.02036), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 17, global step 1080: 'train_Recall' was not in top 1
+Epoch 17, global step 1080: 'train_F1Score' reached 0.03951 (best 0.03951), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 17, global step 1080: 'train_FBetaScore' reached 0.02526 (best 0.02526), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03951016813516617███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 18, global step 1140: 'train_JaccardIndex' reached 0.49570 (best 0.49570), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 18, global step 1140: 'train_Precision' reached 0.02053 (best 0.02053), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 18, global step 1140: 'train_Recall' was not in top 1
+Epoch 18, global step 1140: 'train_F1Score' reached 0.03982 (best 0.03982), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 18, global step 1140: 'train_FBetaScore' reached 0.02546 (best 0.02546), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+Epoch 18, global step 1140: 'train_loss' reached 1.00185 (best 1.00185), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/train_loss.ckpt' as top 1
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.03982001170516014███▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.040150128304958344██▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+	train_F1Score: 0.040150128304958344██▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Epoch 19, global step 1200: 'train_JaccardIndex' reached 0.49596 (best 0.49596), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/JaccardIndex.ckpt' as top 1
+Epoch 19, global step 1200: 'train_Precision' reached 0.02070 (best 0.02070), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/Precision.ckpt' as top 1
+Epoch 19, global step 1200: 'train_Recall' was not in top 1
+Epoch 19, global step 1200: 'train_F1Score' reached 0.04015 (best 0.04015), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/F1Score.ckpt' as top 1
+Epoch 19, global step 1200: 'train_FBetaScore' reached 0.02568 (best 0.02568), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FBetaScore.ckpt' as top 1
+Epoch 19, global step 1200: 'train_loss' reached 1.00146 (best 1.00146), saving model to '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/train_loss.ckpt' as top 1
+`Trainer.fit` stopped: `max_epochs=20` reached.
+	train_F1Score: 0.040150128304958344██▋                        | 33/67 [00:51<00:53,  1.57s/it, loss=1, v_num=qxgs, train_loss_step=0.994, val_loss_step=1.040, val_loss_epoch=1.010, train_loss_epoch=1.000]
+Restoring states from the checkpoint path at /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FbetaScore.ckpt
+Traceback (most recent call last):
+  File "main.py", line 216, in <module>
+    trainer.test(model,
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 785, in test
+    return call._call_and_handle_interrupt(
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/call.py", line 38, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 834, in _test_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1047, in _run
+    self._restore_modules_and_callbacks(ckpt_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 989, in _restore_modules_and_callbacks
+    self._checkpoint_connector.resume_start(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 90, in resume_start
+    loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/strategies/strategy.py", line 359, in load_checkpoint
+    return self.checkpoint_io.load_checkpoint(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/lightning_fabric/plugins/io/torch_io.py", line 84, in load_checkpoint
+    raise FileNotFoundError(f"Checkpoint at {path} not found. Aborting training.")
+FileNotFoundError: Checkpoint at /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FbetaScore.ckpt not found. Aborting training.
+Traceback (most recent call last):
+  File "main.py", line 216, in <module>
+    trainer.test(model,
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 785, in test
+    return call._call_and_handle_interrupt(
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/call.py", line 38, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 834, in _test_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1047, in _run
+    self._restore_modules_and_callbacks(ckpt_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 989, in _restore_modules_and_callbacks
+    self._checkpoint_connector.resume_start(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 90, in resume_start
+    loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/pytorch_lightning/strategies/strategy.py", line 359, in load_checkpoint
+    return self.checkpoint_io.load_checkpoint(checkpoint_path)
+  File "/home/didi/.local/lib/python3.8/site-packages/lightning_fabric/plugins/io/torch_io.py", line 84, in load_checkpoint
+    raise FileNotFoundError(f"Checkpoint at {path} not found. Aborting training.")
+FileNotFoundError: Checkpoint at /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints/FbetaScore.ckpt not found. Aborting training.

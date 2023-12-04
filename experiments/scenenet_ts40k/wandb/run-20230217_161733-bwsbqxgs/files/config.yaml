@@ -1,0 +1,173 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.10
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.10
+    start_time: 1676650653.243232
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      3:
+      - 1
+      - 13
+      - 16
+      - 23
+      4: 3.8.10
+      5: 0.13.10
+      8:
+      - 5
+arrow_geneo:
+  desc: null
+  value: 1
+auto_lr_find:
+  desc: null
+  value: true
+auto_scale_batch_size:
+  desc: null
+  value: true
+batch_size:
+  desc: null
+  value: 4
+checkpoint_dir:
+  desc: null
+  value: experiments/scenenet_ts40k/checkpoints
+checkpoint_every_n_epochs:
+  desc: null
+  value: 1
+checkpoint_every_n_steps:
+  desc: null
+  value: 0
+convex_weight:
+  desc: null
+  value: 5
+criterion:
+  desc: null
+  value: geneo_tversky
+cylinder_geneo:
+  desc: null
+  value: 1
+data_dir:
+  desc: null
+  value: /media/didi/TOSHIBA EXT/TS40K-NEW/
+data_path:
+  desc: null
+  value: /media/didi/TOSHIBA EXT/TS40K-NEW/
+dataset:
+  desc: null
+  value: ts40k
+fast_dev_run:
+  desc: null
+  value: true
+focal_gamma:
+  desc: null
+  value: 4
+geneo_num/cone:
+  desc: null
+  value: 1
+geneo_num/cy:
+  desc: null
+  value: 1
+geneo_num/neg:
+  desc: null
+  value: 1
+gpus:
+  desc: null
+  value: -1
+group:
+  desc: null
+  value: scenenet_ts40k_test
+kernel_size:
+  desc: null
+  value:
+  - 9
+  - 5
+  - 5
+learning_rate:
+  desc: null
+  value: 0.001
+max_epochs:
+  desc: null
+  value: 20
+model:
+  desc: null
+  value: scenenet
+mse_weight:
+  desc: null
+  value: 1
+neg_sphere_geneo:
+  desc: null
+  value: 1
+num_workers:
+  desc: null
+  value: 4
+optimizer:
+  desc: null
+  value: sgd
+optimizer_name:
+  desc: null
+  value: sgd
+output_dir:
+  desc: null
+  value: experiments/scenenet_ts40k/outputs
+precision:
+  desc: null
+  value: 16
+profiler:
+  desc: null
+  value: false
+resume_checkpoint_name:
+  desc: null
+  value: FbetaScore
+resume_from_checkpoint:
+  desc: null
+  value: false
+test_split:
+  desc: null
+  value: 0.3
+transform:
+  desc: null
+  value: null
+tversky_alpha:
+  desc: null
+  value: 2
+tversky_beta:
+  desc: null
+  value: 2
+tversky_smooth:
+  desc: null
+  value: 1.0e-06
+val_split:
+  desc: null
+  value: 0.1
+voxel_grid_size:
+  desc: null
+  value: (64, 64, 64)
+voxel_size:
+  desc: null
+  value: None
+weight_alpha:
+  desc: null
+  value: 1
+weight_epsilon:
+  desc: null
+  value: 0.1
+weighting_scheme_path:
+  desc: null
+  value: /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/core/criterions/hist_estimation.pickle

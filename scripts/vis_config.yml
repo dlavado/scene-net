@@ -1,0 +1,62 @@
+# ----------------------- #
+# Visualization Config File
+# ----------------------- #
+#     This file contains the configuration for visualizing model outputs.
+#     It is used by the visualize.py script.
+
+load_checkpoint:
+  value: True
+  description: 'If True, the checkpoint will be loaded. Else the model is initialized randomly.'
+  type: bool
+checkpoint_dir:
+  value: /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/files/checkpoints
+  description: 'Directory containing the checkpoints to be visualized.'
+  type: str
+checkpoint_metric:
+  value: 'val_FBetaScore'
+  description: 'Metric to be used for selecting the best checkpoint.'
+  type: str
+run_best_metric_search:
+  value: True
+  description: 'If True, the best checkpoint will be searched for in the checkpoint_dir.'
+  type: bool
+visualize_ground_truth:
+  value: True
+  description: 'If True, the ground truth will be visualized.'
+  type: bool
+
+# ------------------ #
+# Data config
+# ------------------ #
+dataset:
+  value: 'ts40k'
+data_path:
+  value: ''
+batch_size:
+  value: 64
+voxel_grid_size:
+  value: (64, 64, 64)
+voxel_size:
+  value: None
+num_workers:
+  value: 8
+val_split:
+  value: 0.1
+test_split:
+  value: 0.3
+# ------------------ #
+# model config
+# ------------------ #
+model:
+  value: 'scenenet'
+# cylinder_geneo:
+#   value: 1
+# arrow_geneo:
+#   value: 1
+# neg_sphere_geneo:
+#   value: 1
+kernel_size:
+  value: (9, 5, 5)
+
+
+

@@ -1,0 +1,30 @@
+2023-02-17 16:17:33,236 INFO    MainThread:16588 [wandb_setup.py:_flush():68] Configure stats pid to 16588
+2023-02-17 16:17:33,236 INFO    MainThread:16588 [wandb_setup.py:_flush():68] Loading settings from /home/didi/.config/wandb/settings
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_setup.py:_flush():68] Loading settings from /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/scripts/wandb/settings
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'SceneNet-Project/scripts/main.py', 'program': 'main.py'}
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:_log_setup():492] Logging user logs to /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/logs/debug.log
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:_log_setup():493] Logging internal logs to /home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/experiments/scenenet_ts40k/wandb/run-20230217_161733-bwsbqxgs/logs/debug-internal.log
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:init():532] calling init triggers
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'group': 'scenenet_ts40k_test', 'output_dir': 'experiments/scenenet_ts40k/outputs', 'dataset': 'ts40k', 'data_path': '', 'batch_size': 4, 'voxel_grid_size': '(64, 64, 64)', 'voxel_size': 'None', 'num_workers': 4, 'val_split': 0.1, 'test_split': 0.3, 'model': 'scenenet', 'cylinder_geneo': 1, 'arrow_geneo': 1, 'neg_sphere_geneo': 1, 'kernel_size': '(9, 5, 5)', 'optimizer': 'sgd', 'learning_rate': 0.001, 'max_epochs': 20, 'gpus': -1, 'criterion': 'geneo_tversky', 'weighting_scheme_path': 'core/criterions/hist_estimation.pickle', 'weight_alpha': 1, 'weight_epsilon': 0.1, 'mse_weight': 1, 'convex_weight': 5, 'tversky_alpha': 2, 'tversky_beta': 2, 'tversky_smooth': 1e-06, 'focal_gamma': 4, 'fast_dev_run': True, 'precision': 16, 'auto_lr_find': True, 'auto_scale_batch_size': True, 'profiler': False, 'resume_from_checkpoint': False, 'checkpoint_dir': 'experiments/scenenet_ts40k/checkpoints', 'resume_checkpoint_name': 'FbetaScore', 'checkpoint_every_n_epochs': 1, 'checkpoint_every_n_steps': 0}
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:init():588] starting backend
+2023-02-17 16:17:33,237 INFO    MainThread:16588 [wandb_init.py:init():592] setting up manager
+2023-02-17 16:17:33,241 INFO    MainThread:16588 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-02-17 16:17:33,243 INFO    MainThread:16588 [wandb_init.py:init():599] backend started and connected
+2023-02-17 16:17:33,247 INFO    MainThread:16588 [wandb_init.py:init():687] updated telemetry
+2023-02-17 16:17:33,266 INFO    MainThread:16588 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-02-17 16:17:33,931 INFO    MainThread:16588 [wandb_run.py:_on_init():2134] communicating current version
+2023-02-17 16:17:33,990 INFO    MainThread:16588 [wandb_run.py:_on_init():2143] got version response 
+2023-02-17 16:17:33,990 INFO    MainThread:16588 [wandb_init.py:init():775] starting run threads in backend
+2023-02-17 16:17:34,320 INFO    MainThread:16588 [wandb_run.py:_console_start():2114] atexit reg
+2023-02-17 16:17:34,320 INFO    MainThread:16588 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-02-17 16:17:34,321 INFO    MainThread:16588 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-02-17 16:17:34,321 INFO    MainThread:16588 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-02-17 16:17:34,322 INFO    MainThread:16588 [wandb_init.py:init():817] run started, returning control to user process
+2023-02-17 16:17:34,331 INFO    MainThread:16588 [wandb_run.py:_config_callback():1250] config_cb None None {'weighting_scheme_path': '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/core/criterions/hist_estimation.pickle'}
+2023-02-17 16:17:34,331 INFO    MainThread:16588 [wandb_run.py:_config_callback():1250] config_cb None None {'weighting_scheme_path': '/home/didi/VSCode/PhD-Shenanigans/SceneNet-Project/core/criterions/hist_estimation.pickle'}
+2023-02-17 16:17:38,516 INFO    MainThread:16588 [wandb_run.py:_config_callback():1250] config_cb None None {'data_path': '/media/didi/TOSHIBA EXT/TS40K-NEW/'}
+2023-02-17 16:17:38,583 INFO    MainThread:16588 [wandb_watch.py:watch():51] Watching
+2023-02-17 16:17:41,623 INFO    MainThread:16588 [wandb_run.py:_config_callback():1250] config_cb None None {'geneo_num/cy': 1, 'geneo_num/cone': 1, 'geneo_num/neg': 1, 'kernel_size': [9, 5, 5], 'optimizer_name': 'sgd', 'learning_rate': 0.001, 'data_dir': '/media/didi/TOSHIBA EXT/TS40K-NEW/', 'batch_size': 4, 'transform': None, 'num_workers': 4, 'val_split': 0.1, 'test_split': 0.3}
+2023-02-17 16:53:13,643 WARNING MsgRouterThr:16588 [router.py:message_loop():77] message_loop has been closed
